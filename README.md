@@ -1,5 +1,7 @@
 # 🌱 Agricultura Inteligente com Dados Espaciais
 
+# Java
+
 ## 📖 Sobre o Projeto
 
 O projeto **Agricultura Inteligente com Dados Espaciais** é uma plataforma desenvolvida para auxiliar agricultores na tomada de decisões por meio da análise de dados satelitais e inteligência artificial.
@@ -206,6 +208,7 @@ http://localhost:8081/swagger
 * Spring Data JPA
 * Hibernate
 * JWT (JJWT)
+* Docker
 
 ### Banco de Dados
 
@@ -277,13 +280,98 @@ Esses registros são criados periodicamente para fins acadêmicos e demonstraç�
 
 Demonstrar como tecnologias espaciais e análise de dados podem auxiliar o setor agrícola através de monitoramento inteligente, fornecendo informações estratégicas para aumento da produtividade e redução de perdas nas plantações.
 
----
+-------------------
+# Devops 
+
+## 1. Gerar o Arquivo JAR
+
+- cd no projeto
+
+- mvn clean package -DskipTests
+
+Ao final será gerado o arquivo:
+
+target/agricultura-inteligente-api-0.0.1-SNAPSHOT.jar
+
+## 2. Containers
+
+Na raiz do projeto execute:
+
+- docker-compose build
+
+Para Iniciar os Containers:
+
+- docker-compose up -d
+
+Verificar Containers em Execução:
+
+- docker ps
+
+## 3. Visualizar Logs
+
+Logs da Aplicação:
+
+- docker logs app-rm556588
+- 
+Logs do Banco de Dados:
+
+- docker logs postgres-rm556588
+
+## 4. API
+
+http://localhost:8081/swagger
+
+## 5. Acessar o Container da Aplicação
+
+- docker exec -it app-rm556588 sh
+
+Verificar diretório:
+
+- pwd
+- ls -l
+
+Verificar usuário:
+
+- whoami
+
+## 6. Acessar o Container do Banco
+
+- docker exec -it postgres-rm556588 psql -U postgres -d agricultura
+
+Consultar dados:
+
+- \dt
+- SELECT * FROM tb_plantacao;
+- SELECT * FROM tb_dado_satelital;
+
+## 7. Encerrar
+
+- exit
+- docker-compose down
+- docker-compose down -v
+
+## Conteúdos
+
+Container da Aplicação
+
+* Aplicação Java Spring Boot
+* Construído via Dockerfile
+* Usuário não privilegiado
+* Porta 8081 exposta
+* Executa na mesma rede do 
+
+Container do Banco de Dados
+
+* PostgreSQL 16
+* Volume persistente
+* Porta 5432 exposta
+* Executa na mesma rede da aplicação
+
+--------------------
 
 ## 👥 Integrantes
 
-* [Nome Integrante 1]
-* [Nome Integrante 2]
-* [Nome Integrante 3]
+* Gabriel Yuji Suzuki (RM556588)
 
 ---
 
