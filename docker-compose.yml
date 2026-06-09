@@ -1,0 +1,47 @@
+version: '3.8'
+
+services:
+
+  postgres-rm556588:
+    image: postgres:16
+    container_name: postgres-rm556588
+    restart: always
+
+    environment:
+      POSTGRES_DB: agricultura
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: p0rtugas
+
+    ports:
+      - "5432:5432"
+
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+    networks:
+      - agricultura-network
+
+  app-rm556588:
+    build: .
+
+    container_name: app-rm556588
+
+    depends_on:
+      - postgres-rm556588
+
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-rm556588:5432/agricultura
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: p0rtugas
+
+    ports:
+      - "8081:8081"
+
+    networks:
+      - agricultura-network
+
+networks:
+  agricultura-network:
+
+volumes:
+  postgres_data:
