@@ -1,6 +1,6 @@
 # 🌱 Agricultura Inteligente com Dados Espaciais
 
-# Java
+# Java e Devops
 
 ## 📖 Sobre o Projeto
 
