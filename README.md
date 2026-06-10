@@ -126,6 +126,7 @@ Authorization: Bearer SEU_TOKEN
 * Maven 3.9+
 * PostgreSQL 16+
 * Eclipse ou VS Code
+* Lombok
 
 ### 1. Clonar o projeto
 
