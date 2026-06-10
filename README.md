@@ -276,6 +276,9 @@ Demonstrar como tecnologias espaciais e análise de dados podem auxiliar o setor
 -------------------
 # Devops 
 
+<img width="684" height="532" alt="image" src="https://github.com/user-attachments/assets/05f8d0ff-913c-4285-bd21-89f8f55843ae" />
+
+
 ## 1. Gerar o Arquivo JAR
 
 - cd no projeto
@@ -351,7 +354,6 @@ Container da Aplicação
 * Construído via Dockerfile
 * Usuário não privilegiado
 * Porta 8081 exposta
-* Executa na mesma rede do 
 
 Container do Banco de Dados
 
