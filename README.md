@@ -12,17 +12,10 @@ Além disso, o sistema realiza a geração automática de dados simulados para f
 
 ---
 
-## 🚀 Deploy
-
-**Aplicação:**
-[INSERIR LINK DO DEPLOY]
-
----
-
 ## 🎥 Vídeo de Apresentação
 
-**Vídeo demonstrativo:**
-[INSERIR LINK DO VÍDEO]
+- Vídeo de Java: https://www.youtube.com/watch?v=LHL9zVM_Z0E
+- Vídeo de Devops: https://www.youtube.com/watch?v=HLRYTbMV9lw
 
 ---
 
